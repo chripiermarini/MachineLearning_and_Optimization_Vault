@@ -1,5 +1,4 @@
-
-Useful concepts from statistics:
+Useful concepts from probability and statistics (might extend this note to a separated folder).
 
 Relevant for [[Classification]] tasks:
 

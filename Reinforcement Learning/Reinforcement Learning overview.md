@@ -16,3 +16,6 @@ Beyond the solely agent and the environment, it is possible to identify four mai
 Critically important is to define the concept of *state*, as a summary of the overall amount of information that the agent has w.r.t the environment settings at a given time. It represents the input to the reward function and the value function (being the short term and long term reward signal that the agent takes).
 
 Most of the reinforcement methods of the book involve the estimation of the value function, even though not all of the state of the art algorithms require to do so. Evolutionary methods, such as genetic algorithms, genetic programming, simulated annealing, apply multiple static policies each interacting over and extended period of time with a separate instance of the environment. The policies that obtain the most reward are carried over to the next generation of policies (as well as random variations of them), and the process repeats. Those work well when the search space of the policies is narrow and we do not have information of the environment.
+
+Related topics:
+- [[Exploitation vs exploration]]

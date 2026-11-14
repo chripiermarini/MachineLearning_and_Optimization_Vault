@@ -28,9 +28,16 @@ Here I gather notes regarding coding best practices, use of libraries, and in ge
 2. [[Technical notes from unsupervised learning exercises]]
 3. [[Technical notes from simulation exercises]]
 4. [[Agentic coding]]
+5. 
 
 ----
 #### List of resources
+
+###### Machine learning
+
+1) [An introduction to statistical learning](https://www.statlearning.com/)
+2) [The Elements of Statistical Learning](https://www.sas.upenn.edu/~fdiebold/NoHesitations/BookAdvanced.pdf)
+3) [Hands-on Machine learning book](http://14.139.161.31/OddSem-0822-1122/Hands-On_Machine_Learning_with_Scikit-Learn-Keras-and-TensorFlow-2nd-Edition-Aurelien-Geron.pdf)
 
 ###### Mathematical optimization
 
@@ -41,11 +48,7 @@ Here I gather notes regarding coding best practices, use of libraries, and in ge
 5) _Nonlinear Programming_ (2016), by D. P. Bertsekas
 6) *Convex optimization* by Vandenberghe and Boyd
 7) [*Multi-objective optimization* by Kalyanmoy Deb](https://books.google.lu/books?hl=it&lr=&id=N-1hWMNUa2EC&oi=fnd&pg=PR2&dq=multiobjective+optimization&ots=eFJBUq0M5Z&sig=xUqydfeGsRLYOzRoGNbViZRonEE&redir_esc=y#v=onepage&q&f=false)
-###### Machine learning
 
-1) [An introduction to statistical learning](https://www.statlearning.com/)
-2) [The Elements of Statistical Learning](https://www.sas.upenn.edu/~fdiebold/NoHesitations/BookAdvanced.pdf)
-3) [Hands-on Machine learning book](http://14.139.161.31/OddSem-0822-1122/Hands-On_Machine_Learning_with_Scikit-Learn-Keras-and-TensorFlow-2nd-Edition-Aurelien-Geron.pdf)
 ###### Reinforcement learning
 
 1) [Reinforcement learning: an introduction (2nd Ed.)](http://incompleteideas.net/book/the-book-2nd.html)
@@ -54,4 +57,5 @@ Here I gather notes regarding coding best practices, use of libraries, and in ge
 ###### Coding notes and best practices
 
 1) [The missing Semester of your CS education](https://missing.csail.mit.edu/)
+2) *Clean code* and *Refactoring* by the gang of four.
 

@@ -20,6 +20,12 @@ The Machine Learning section is religiously built upon the [Introduction to Stat
 1) [[Reinforcement Learning overview]]
 2) [[Finite Markov Decision processes]]
 
+###### Statistics
+1) [[Prior and posterior distribution]]
+2) [[Normal distirbution]]
+3) [[Maximum Likelihood Estimation]]
+4) [[Convergence in probability]]
+5) [[Homoschedasticity]]
 ###### Technical notes
 
 Here I gather notes regarding coding best practices, use of libraries, and in general, practical tips and findings from study.
@@ -53,7 +59,8 @@ Here I gather notes regarding coding best practices, use of libraries, and in ge
 
 1) [Reinforcement learning: an introduction (2nd Ed.)](http://incompleteideas.net/book/the-book-2nd.html)
 2) _Dynamic Programming and Optimal Control_ by Bertsekas
-
+###### Statistics
+1) [All of Statistics - Wassermann](https://egrcc.github.io/docs/math/all-of-statistics.pdf)
 ###### Coding notes and best practices
 
 1) [The missing Semester of your CS education](https://missing.csail.mit.edu/)

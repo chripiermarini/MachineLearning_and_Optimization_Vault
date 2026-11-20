@@ -52,7 +52,7 @@ Here I gather notes regarding coding best practices, use of libraries, and in ge
 3) _Network Flows_ by Ahuja, Magnanti and Orlin for Combinatorial Optimization
 4) _Numerical Optimization_ by Nocedal and Wright for Continuous Optimization
 5) _Nonlinear Programming_ (2016), by D. P. Bertsekas
-6) *Convex optimization* by Vandenberghe and Boyd
+6) [*Convex optimization* by Vandenberghe and Boyd](https://github.com/ShiqinHuo/Numerical-Optimization-Books/blob/master/Convex%20Optimization%20Boyd.pdf)
 7) [*Multi-objective optimization* by Kalyanmoy Deb](https://books.google.lu/books?hl=it&lr=&id=N-1hWMNUa2EC&oi=fnd&pg=PR2&dq=multiobjective+optimization&ots=eFJBUq0M5Z&sig=xUqydfeGsRLYOzRoGNbViZRonEE&redir_esc=y#v=onepage&q&f=false)
 
 ###### Reinforcement learning

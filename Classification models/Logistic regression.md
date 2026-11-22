@@ -38,7 +38,20 @@ This function represent the likelihood that the model provides the highest proba
 
 Then, the rationale is identical to the regression task setting: each coefficient is then tested and then a *p-value* for each coefficient is computed. 
 
-#### Multivariate logistic regression model
+##### Negative log likelihood
+
+In practice, instead of maximizing the likelihood directly, we work with its logarithm. Since $\log$ is monotonically increasing, the maximizer does not change, while the product over observations becomes a sum, which is numerically much more stable. 
+
+Moreover, optimization routines are designed to *minimize*, so we flip the sign and obtain the **negative log-likelihood**. Using the fact that $y_i \in \{0,1\}$, each factor of the likelihood can be written compactly as $p(x_i)^{y_i}\,(1-p(x_i))^{1-y_i}$, hence
+
+$$
+\mathcal{L}(\beta) = \prod_{i=1}^{n} p(x_i)^{y_i}\,\big(1-p(x_i)\big)^{1-y_i}
+\quad\Longrightarrow\quad
+-\log \mathcal{L}(\beta) = -\sum_{i=1}^{n}\Big[\, y_i \log p(x_i) + (1-y_i)\log\big(1-p(x_i)\big) \Big].
+$$
+
+This quantity is the **binary cross-entropy** (or log-loss). Minimizing it is equivalent to maximizing the likelihood, and it is convex in $\beta$, but it has no closed-form solution, so it is solved iteratively (e.g. Newton/IRLS or gradient descent).
+##### Multivariate logistic regression model
 
 We have a general linear model, having basically an extended version of the linear model, with more than one predictor.
 

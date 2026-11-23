@@ -74,3 +74,30 @@ W_grad, b_grad = jax.grad(loss, (0, 1))(W, b)
 print(f'{W_grad=}')
 print(f'{b_grad=}')
 ```
+### .vmap()
+
+The above function transforms the function provided as input (which can compute only one element at a time) to a new function that can work efficiently on batches of inputs. 
+
+For example, one can have the following function:
+
+```python 
+def parabolic_function(x):
+	return x**2
+```
+
+And, in order to apply to an array of the type:
+
+```Python
+array = jnp.arange(5)
+new_array = jnp.stack([array, array], axis = 1)
+```
+(remember here: ***stacks*** adds a new axis! Hence , as `array` is one dimensional, the result has shape (5,2). )
+
+One can simply transform the new function as follows:
+```Python
+parallel_parabolic_function = jax.vmap(parabolic_function)
+print(parallel_parabolic_function(new_array))
+```
+
+
+Check here `in_axes` and `out_axes`.

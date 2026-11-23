@@ -65,4 +65,5 @@ Here I gather notes regarding coding best practices, use of libraries, and in ge
 
 1) [The missing Semester of your CS education](https://missing.csail.mit.edu/)
 2) *Clean code* and *Refactoring* by the gang of four.
+3) [The JAX official documentation](https://docs.jax.dev/en/latest/index.html)
 

@@ -1,3 +1,5 @@
+Tags:
+- #reinforcement-learning 
 Possibly the simplest method to decide which action to take, an action-value method requires to  compute the *average of the rewards* obtained prior to the specific time step $t$.
 
 Hence, a mathematical formulation of this would be

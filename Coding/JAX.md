@@ -99,5 +99,53 @@ parallel_parabolic_function = jax.vmap(parabolic_function)
 print(parallel_parabolic_function(new_array))
 ```
 
+We can also have nested `.vmap()`. In that case, it is important to read the function from the external function towards the internal function. Let's imagine the following example:
 
-Check here `in_axes` and `out_axes`.
+```Python
+x = jnp.array([1,2,4])
+
+def dist(x,y):
+    return jnp.sqrt(jnp.sum((x-y)**2))
+
+  
+
+def all_pairs(f):
+    # first we take the external function, which maps along the first axis of
+    # the second argument, and takes the whole vector of the first argument.
+
+    # then the internal function maps along the first dimension of the first vector
+    # and takes the single point provided as the second argument from above
+
+    # the result is a matrix which will have the difference between each pair,
+    # where in position (i,j) it has sqrt of the squared difference between
+    # the i-th element of first array and the j-th element of the second array.
+    return jax.vmap(jax.vmap(f, in_axes=(None, 0)), in_axes = (0, None))
+ 
+x = jnp.array([1,2,4])
+
+print(all_pairs(dist)(x,x))
+```
+# Mapping along a single dimension
+
+This is a delicate topic to learn to master JAX. One needs to control with precision along which axis *map* a certain function. By mapping, we mean that we are applying that specific function for each element in that specific dimension. If we set `None` to that dimension, we do not map along it, and hence this means that we apply such function for the entire tensor of that dimension. 
+
+As an example:
+
+```Python
+def dist(x,y):
+	return jnp.sqrt(jnp.sum((x-y)**2)
+
+def single_pairs(f):
+	return jnp.vmap(f, in_axes = (None, 0))
+
+array = jnp.array([1,2,4])
+single_pairs(dist)(array, array)
+```
+
+In this instance, what happens is that we are mapping along the first dimension of y, but we are not mapping along any dimension of x. Hence, when we apply the function, we are going to produce a vector of 3 values, where each value is the sum of the squared of *each single y (one per vector position*, minus the values of x *altogheter*.
+
+Hence, it will compute 
+$$
+single\_pairs_i = (x_1 - y_i)^{2} + (x_2 - y_i)^{2} + (x_3 - y_i)^{2}
+$$
+# Tracing and specializing on data values

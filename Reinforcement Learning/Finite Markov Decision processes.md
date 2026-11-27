@@ -41,3 +41,11 @@ $$
 ##### Goals and rewards
 
 The formal definition for goals and rewards is tied to the actual role of the above concepts within a Reinforcement Learning environment. The goals is the maximisation of the expected value of the cumulative sum of a scalar signal (the *reward*), which is provided by the environment when an agent executes an action.
+
+###### The objective of the agent is to maximize the sum of the rewards, that is the return.
+
+Of course, knowing that at each state we do not know the exact sum of returns for each state-action pair, we can just estimate it using the *expected return*, as the sum of all the returns, where future returns are discounted by a factor:
+
+$$
+G_t = \sum_{k = t+1}^{T} \gamma_{k-t-1} * R_k
+$$

@@ -11,4 +11,4 @@ Hence it is the expected value of the reward taken given a specific action $a$. 
 
 Related topics:
 
-- [[Action-value method]]
+- [[Action-value methodi]]]

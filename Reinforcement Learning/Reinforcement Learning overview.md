@@ -19,3 +19,8 @@ Most of the reinforcement methods of the book involve the estimation of the valu
 
 Related topics:
 - [[Exploitation vs exploration]]
+- [[Finite Markov Decision processes]]
+- [[Incremental computation of rewards]]
+- [[Action-value method]]
+- [[K-armed bandit problem]]
+- [[Partially Observable Markov decision process]]
